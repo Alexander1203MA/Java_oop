@@ -1,25 +1,29 @@
 package institute.model;
 
-public class Teacher extends User{
-    private Integer teacherId;
+public class Teacher extends User {
+    private int teacherId;
 
-    public void setTeacherId(Integer teacherId) {
+    public Teacher(String firstName, String secondName,
+                   String lastName, int teacherId) {
+        super(firstName, secondName, lastName);
         this.teacherId = teacherId;
     }
 
-    private final String subject;
-    public Teacher (Integer age, String name, String subject) {
-        super(age, name);
-        this.subject = subject;
+    public int getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
     }
 
     @Override
     public String toString() {
         return "Teacher{" +
-                "teacherId=" + teacherId +
-                ", subject='" + subject + '\'' +
-                ", age=" + age +
-                ", name='" + name + '\'' +
+                "teacherId='" + teacherId + '\'' +
+                ", firstName='" + super.getFirstName() + '\'' +
+                ", secondName='" + super.getSecondName() + '\'' +
+                ", patronymic='" + super.getLastName() + '\'' +
                 '}';
     }
 }

@@ -10,7 +10,21 @@ import institute.controller.Controller;
 
 public class Main {
     public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.start();
+        System.out.println();
+        Controller Controller = new Controller();
+
+        Controller.createTeacher("Якушев", "Иван", "Олегович");
+        Controller.createTeacher("Калайчук", "Любовь", "Александровна");
+        Controller.createStudent("Скоромор", "Иван", "Антонович");
+        Controller.createStudent("Крылова", "Анастасия", "Юрьевна");
+        Controller.createStudent("Кувичко", "Мария", "Архипова");
+        Controller.createStudent("Кузьмин", "Дмитрий", "Иванович");
+        Controller.createStudent("Оскаль", "Сергей", "Боловолич");
+        Controller.createStudent("Тихонов", "Максим", "Миронович");
+        Controller.createStudent("Клейн", "Алекс", "Валивич");
+
+        Controller.printGroupLearn(Controller.createGroupLearn(2, 2, 4, 5, 7));
+    
+        System.out.println();
     }
 }

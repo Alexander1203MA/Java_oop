@@ -1,19 +1,48 @@
 package institute.model;
 
 public abstract class User {
-    protected Integer age;
-    protected String name;
+    private String firstName;
+    private String secondName;
+    private String lastName;
 
-    public User(Integer age, String name) {
-        this.age = age;
-        this.name = name;
-    }
 
     @Override
     public String toString() {
         return "User{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public User(String firstName, String secondName, String lastName) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.lastName = lastName;
+
     }
 }
